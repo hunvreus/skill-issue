@@ -1,0 +1,7 @@
+interface:
+  display_name: "Refactor"
+  short_description: "Clean up, simplify, and improve code"
+  default_prompt: "Use $refactor to review and refactor the selected code scope."
+
+policy:
+  allow_implicit_invocation: true
