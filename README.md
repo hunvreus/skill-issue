@@ -48,4 +48,4 @@ Keep `SKILL.md` frontmatter to `name` and `description`. Put UI-facing metadata 
 
 Reusable `AGENTS.md` templates live in [`templates/agents`](./templates/agents/).
 
-- [`js-react-fullstack`](./templates/agents/js-react-fullstack.md): for TypeScript full-stack web apps using React, shadcn-style UI, Drizzle-backed models, and server/client module boundaries.
+- [`js-react-fullstack`](./templates/agents/js-react-fullstack.md): `AGENTS.md` template for TypeScript full-stack web apps with React UI, shadcn component conventions, Drizzle schemas/migrations, and separated `src/components`, `src/lib`, and `src/server` ownership.

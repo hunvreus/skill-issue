@@ -1,7 +1,3 @@
-# JS / React Full-Stack Agent Template
-
-Use this as an `AGENTS.md` starting point for TypeScript full-stack web apps using React, shadcn-style UI components, Drizzle-backed models, and clear server/client module boundaries.
-
 # Agent Rules
 
 ## Communication
