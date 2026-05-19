@@ -1,0 +1,7 @@
+interface:
+  display_name: "Review"
+  short_description: "Find actionable code review issues"
+  default_prompt: "Use $review to review the selected code scope."
+
+policy:
+  allow_implicit_invocation: true

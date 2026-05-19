@@ -1,0 +1,7 @@
+interface:
+  display_name: "Debug"
+  short_description: "Reproduce, isolate, and fix bugs"
+  default_prompt: "Use $debug to investigate and fix the failing behavior."
+
+policy:
+  allow_implicit_invocation: true

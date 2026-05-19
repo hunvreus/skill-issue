@@ -1,0 +1,7 @@
+interface:
+  display_name: "Prototype"
+  short_description: "Build throwaway prototypes"
+  default_prompt: "Use $prototype to explore this idea with throwaway code."
+
+policy:
+  allow_implicit_invocation: true

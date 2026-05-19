@@ -1,0 +1,7 @@
+interface:
+  display_name: "Audit"
+  short_description: "Assess a new or unfamiliar project"
+  default_prompt: "Use $audit to assess this project and identify the highest-value next actions."
+
+policy:
+  allow_implicit_invocation: true

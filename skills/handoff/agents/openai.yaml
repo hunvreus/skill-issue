@@ -1,0 +1,7 @@
+interface:
+  display_name: "Handoff"
+  short_description: "Create continuation handoffs"
+  default_prompt: "Use $handoff to summarize this work for the next session."
+
+policy:
+  allow_implicit_invocation: true

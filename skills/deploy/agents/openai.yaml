@@ -1,0 +1,7 @@
+interface:
+  display_name: "Deploy"
+  short_description: "Set up and validate app deployment"
+  default_prompt: "Use $deploy to set up or validate deployment for this app."
+
+policy:
+  allow_implicit_invocation: true

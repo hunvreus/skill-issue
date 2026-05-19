@@ -1,0 +1,7 @@
+interface:
+  display_name: "Test"
+  short_description: "Add and repair behavior tests"
+  default_prompt: "Use $test to add or repair tests for this behavior."
+
+policy:
+  allow_implicit_invocation: true

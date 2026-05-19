@@ -1,0 +1,7 @@
+interface:
+  display_name: "Document"
+  short_description: "Create and update project docs"
+  default_prompt: "Use $document to create or update documentation for this scope."
+
+policy:
+  allow_implicit_invocation: true

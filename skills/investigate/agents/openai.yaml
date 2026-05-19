@@ -1,0 +1,7 @@
+interface:
+  display_name: "Investigate Live"
+  short_description: "Investigate deployed app issues"
+  default_prompt: "Use $investigate to diagnose this live or deployed-app issue."
+
+policy:
+  allow_implicit_invocation: true

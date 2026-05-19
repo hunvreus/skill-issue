@@ -1,0 +1,7 @@
+interface:
+  display_name: "Release"
+  short_description: "Prepare and validate releases"
+  default_prompt: "Use $release to prepare or validate this release."
+
+policy:
+  allow_implicit_invocation: true
