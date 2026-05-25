@@ -1,0 +1,7 @@
+interface:
+  display_name: "Second Opinion"
+  short_description: "Ask another AI CLI to critique a plan"
+  default_prompt: "Use $second-opinion to ask another local AI CLI for feedback on the current proposal."
+
+policy:
+  allow_implicit_invocation: true

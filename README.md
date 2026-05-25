@@ -1,16 +1,29 @@
 # Skill Issue
 
-Small agent skills for real software work.
+This is a toolkit of skills I use every day to write, test, document, and deploy software.
 
-This repo is an experiment in no-nonsense, just-in-time engineering skills. The goal is not to micromanage the model or turn every workflow into a process framework. The goal is to give agents a few sharp defaults for work that commonly goes wrong: debugging without a repro, reviewing without findings, refactoring without validation, documenting guessed behavior, and releasing without checking the basics.
+Agents know a lot but often need better defaults. They don't need to be micromanaged or forced into rigid processes; they just need a nudge in the right direction.
 
-## Philosophy
+These skills try to do just that:
 
-- Skills should be concise and composable.
-- Skills should describe the shape of work, not every implementation detail.
-- Skills should leave judgment with the agent unless the task has known failure modes.
-- Skills should be pulled in when useful, not become a project management system.
-- Skills should encode practical engineering discipline: feedback loops, validation, small changes, clear outputs.
+- They are concise and composable.
+- They describe the shape of work, not every implementation detail.
+- They leave judgment with the agent unless the task has known failure modes.
+- They stay discrete instead of trying to become a full development lifecycle.
+
+## Quickstart
+
+Install the repo:
+
+```sh
+npx skills add hunvreus/skill-issue
+```
+
+Install every skill without prompting:
+
+```sh
+npx skills add hunvreus/skill-issue --all
+```
 
 ## Skills
 
@@ -24,25 +37,8 @@ This repo is an experiment in no-nonsense, just-in-time engineering skills. The 
 - [`refactor`](./skills/refactor/SKILL.md): simplify code while preserving behavior.
 - [`release`](./skills/release/SKILL.md): prepare and validate releases.
 - [`review`](./skills/review/SKILL.md): review changes for actionable issues.
+- [`second-opinion`](./skills/second-opinion/SKILL.md): ask another local AI CLI to critique a proposal.
 - [`test`](./skills/test/SKILL.md): add, repair, or drive behavior tests.
-
-## Skill Style
-
-Preferred shape:
-
-```md
-# Verb
-
-## Scope
-## Workflow
-## Output
-## Examples
-## Guardrails
-```
-
-`Examples` is optional. Use it only when examples clarify categories or materially improve behavior.
-
-Keep `SKILL.md` frontmatter to `name` and `description`. Put UI-facing metadata in `agents/openai.yaml`.
 
 ## Agent Templates
 

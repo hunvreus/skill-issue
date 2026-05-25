@@ -15,7 +15,19 @@
 
 - Each skill lives in `skills/<name>/`.
 - Keep `SKILL.md` frontmatter to `name` and `description`.
-- Prefer the body shape documented in `README.md`: `Scope`, `Workflow`, `Output`, optional `Examples`, `Guardrails`.
+- Prefer this body shape:
+
+```md
+# Verb
+
+## Scope
+## Workflow
+## Output
+## Examples
+## Guardrails
+```
+
+- `Examples` is optional. Use it only when examples clarify categories or materially improve behavior.
 - Update `README.md` when adding, removing, or renaming skills.
 - Keep `agents/openai.yaml` aligned with the skill.
 
