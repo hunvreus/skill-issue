@@ -1,0 +1,7 @@
+interface:
+  display_name: "Overhaul"
+  short_description: "Plan and run cautious broad codebase work"
+  default_prompt: "Use $overhaul to plan a cautious multi-step improvement effort for this codebase."
+
+policy:
+  allow_implicit_invocation: true

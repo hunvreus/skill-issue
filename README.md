@@ -33,6 +33,7 @@ npx skills add hunvreus/skill-issue --all
 - [`document`](./skills/document/SKILL.md): create or update project docs from verified behavior.
 - [`handoff`](./skills/handoff/SKILL.md): summarize work so another session can continue.
 - [`investigate`](./skills/investigate/SKILL.md): investigate live app or deployment issues.
+- [`overhaul`](./skills/overhaul/SKILL.md): plan and run cautious multi-step codebase improvement.
 - [`prototype`](./skills/prototype/SKILL.md): build throwaway prototypes that answer one question.
 - [`refactor`](./skills/refactor/SKILL.md): simplify code while preserving behavior.
 - [`release`](./skills/release/SKILL.md): prepare and validate releases.
