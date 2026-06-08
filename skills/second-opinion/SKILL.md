@@ -5,15 +5,15 @@ description: Ask another local AI CLI for feedback on a proposal, architecture, 
 
 # Second Opinion
 
-## Scope
+## Input
 
 - A proposal, architecture, feature plan, refactor plan, implementation approach, review finding, or technical decision to sanity-check.
-- The target AI should be specified by the user or clear from context.
-- If no target AI is specified, detect available local AI CLIs and ask the user which one to use.
+- Use explicit input first; otherwise infer the proposal and target AI from context.
+- Safest default: detect available local AI CLIs and ask which one to use.
 
 ## Workflow
 
-1. **Clarify target and scope**. Identify the proposal to review and the AI CLI to ask. If either is missing, infer from context or ask one focused question.
+1. **Clarify target and input**. Identify the proposal to review and the AI CLI to ask. If either is missing, infer from context or ask one focused question.
 2. **Detect available CLIs**. Check likely commands with `command -v`, such as `claude`, `gemini`, `codex`, `cursor`, `opencode`, and `aider`. Do not assume a CLI exists.
 3. **Verify invocation**. Use the selected CLI's help output before running it. Prefer non-interactive prompt modes and avoid commands that open editors, mutate files, install packages, or start long-lived sessions.
 4. **Write the proposal**. Create a temporary directory with `mktemp -d` and write the proposal, relevant constraints, and explicit questions to a file such as `proposal.md`.

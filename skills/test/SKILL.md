@@ -5,10 +5,11 @@ description: Add, update, or repair tests for behavior, regressions, and test-fi
 
 # Test
 
-## Scope
+## Input
 
 - A behavior, bug, module, feature, failing test, or uncovered path to test.
-- If no scope is provided, identify the public behavior and highest-risk paths before writing tests.
+- Use explicit input first; otherwise infer from context, recent edits, selected files, or branch.
+- Safest default: identify public behavior and highest-risk paths before writing tests.
 
 ## Workflow
 

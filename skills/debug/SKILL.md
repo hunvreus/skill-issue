@@ -5,10 +5,11 @@ description: Debug failing, flaky, slow, or incorrect behavior with a reproducib
 
 # Debug
 
-## Scope
+## Input
 
-- A bug report, failing command, failing test, error message, performance complaint, reproduction steps, or affected scope.
-- If no repro is provided, first look for an agent-runnable way to reproduce the symptom.
+- A bug report, failing command, test, error, performance complaint, repro steps, or affected area.
+- Use explicit input first; otherwise infer from context, recent edits, selected files, or branch.
+- Safest default: find an agent-runnable repro before patching.
 
 ## Workflow
 

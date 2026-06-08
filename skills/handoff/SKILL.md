@@ -5,10 +5,11 @@ description: Create a concise handoff for another agent or future session to con
 
 # Handoff
 
-## Scope
+## Input
 
 - A current task, session, branch, PR, issue, or requested future focus.
-- If no file path is provided, return the handoff inline.
+- Use explicit input first; otherwise infer from context, recent edits, selected files, or branch.
+- Safest default: return the handoff inline.
 
 ## Workflow
 

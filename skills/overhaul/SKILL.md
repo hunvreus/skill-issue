@@ -5,11 +5,11 @@ description: Plan and execute a cautious, multi-step improvement effort for a re
 
 # Overhaul
 
-## Scope
+## Input
 
 - A whole repository, platform, major subsystem, or long-running improvement program.
-- Use this when the work is too broad for a single `refactor`, `review`, `test`, or `document` pass.
-- If the user only asks for a narrow code cleanup, use `refactor` directly instead.
+- Use explicit input first; otherwise infer from context, recent edits, selected files, or branch.
+- Safest default: plan first and get user signoff before broad edits.
 
 ## Workflow
 

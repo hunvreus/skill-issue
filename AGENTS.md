@@ -20,7 +20,7 @@
 ```md
 # Verb
 
-## Scope
+## Input
 ## Workflow
 ## Output
 ## Examples
@@ -33,5 +33,6 @@
 
 ## Templates
 
-- Reusable `AGENTS.md` templates belong under `templates/agents/`.
-- Template files must not be named `AGENTS.md`; use descriptive inert names such as `js-react-fullstack.md`.
+- Reusable templates belong under `templates/<category-tech>/`.
+- Template bundles can include `AGENTS.md` and related starter files.
+- Use descriptive category/tech directory names such as `fullstack-js`.

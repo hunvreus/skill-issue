@@ -5,10 +5,11 @@ description: Set up, validate, or run deployment for the current app on Cloudfla
 
 # Deploy
 
-## Scope
+## Input
 
 - An app or service in the current repo, plus a target such as Cloudflare, VPS, or a mix of both.
-- If no deploy path exists, first help define one and document it before automating it.
+- Use explicit input first; otherwise infer from context, config, docs, selected files, or branch.
+- Safest default: define and document the deploy path before automating it.
 
 ## Workflow
 
@@ -19,7 +20,7 @@ description: Set up, validate, or run deployment for the current app on Cloudfla
 5. **Apply best practices**. Prefer least-privilege secrets, HTTPS, non-root processes where applicable, firewall or platform access controls, health checks, logs, rollback path, and documented env vars.
 6. **Configure deployment**. Add or update platform config, CI/CD, Docker/systemd/service files, scripts, and docs using repo conventions.
 7. **Validate**. Run local checks, build, deploy dry run where available, smoke test, health check, logs check, and rollback notes.
-8. **Document**. Keep `docs/devops.md` as the deploy/ops index; add runbooks under `docs/runbooks/` only for step-by-step procedures.
+8. **Document**. Keep internal developer and operator deployment notes under `docs/development/`, such as `docs/development/deployment.md`, `docs/development/ci.md`, `docs/development/operations.md`, or `docs/development/environment.md`.
 
 ## Output
 

@@ -5,14 +5,15 @@ description: Review and refactor code within a specified scope. Use when the use
 
 # Refactor
 
-## Scope
+## Input
 
-- A file, module, package, feature area, diff, or project scope to refactor.
-- If no scope is provided, confirm whether to inspect the whole project before changing code.
+- A file, module, package, feature, diff, or project area to refactor.
+- Use explicit input first; otherwise infer from context, recent edits, selected files, or branch.
+- Safest default: ask before refactoring the whole project.
 
 ## Workflow
 
-1. **Confirm scope**. If no scope is provided, confirm with the user whether they want to refactor the entire project.
+1. **Confirm input**. If no input is provided or implied, confirm before refactoring the entire project.
 2. **Identify surface**. Find files and direct dependencies that may need review or change.
 3. **Run baseline checks**. Use available tests, typecheck, lint, or build commands for the scope. Note missing or failing tooling.
 4. **Identify refactors**:
@@ -28,7 +29,7 @@ description: Review and refactor code within a specified scope. Use when the use
 
 ## Output
 
-- Scope reviewed
+- Input reviewed
 - Refactors applied
 - Behavior preserved or intentionally changed
 - Validation run

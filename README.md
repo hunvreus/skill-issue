@@ -13,6 +13,8 @@ These skills try to do just that:
 
 ## Quickstart
 
+This repo is a skill pack for the `skills` CLI. The `SKILL.md` files define reusable agent workflows, `agents/openai.yaml` adds OpenAI/Codex-facing metadata, and `templates/` contains starter files grouped by category/tech, including `AGENTS.md` policies for app repos.
+
 Install the repo:
 
 ```sh
@@ -24,6 +26,10 @@ Install every skill without prompting:
 ```sh
 npx skills add hunvreus/skill-issue --all
 ```
+
+## License
+
+[MIT](./LICENSE)
 
 ## Skills
 
@@ -43,6 +49,6 @@ npx skills add hunvreus/skill-issue --all
 
 ## Agent Templates
 
-Reusable `AGENTS.md` templates live in [`templates/agents`](./templates/agents/).
+Reusable templates live in [`templates`](./templates/), grouped by category/tech.
 
-- [`js-react-fullstack`](./templates/agents/js-react-fullstack.md): `AGENTS.md` template for TypeScript full-stack web apps with React UI, shadcn component conventions, Drizzle schemas/migrations, and separated `src/components`, `src/lib`, and `src/server` ownership.
+- [`fullstack-js`](./templates/fullstack-js/AGENTS.md): `AGENTS.md` template for TypeScript full-stack web apps with React UI, shadcn component conventions, Drizzle schemas/migrations, and separated `src/components`, `src/lib`, and `src/server` ownership.

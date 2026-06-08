@@ -5,10 +5,11 @@ description: Build a clearly throwaway prototype to answer one design, logic, st
 
 # Prototype
 
-## Scope
+## Input
 
 - A design, state model, UI idea, interaction, algorithm, integration, or uncertainty to explore.
-- The input should identify the question the prototype must answer; if not, define it before coding.
+- Use explicit input first; otherwise infer the question from context.
+- Safest default: define the question before coding.
 
 ## Workflow
 

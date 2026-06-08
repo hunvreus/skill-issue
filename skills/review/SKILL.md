@@ -5,14 +5,15 @@ description: Review code changes or a selected code scope for correctness, regre
 
 # Review
 
-## Scope
+## Input
 
 - A PR, branch, commit range, diff, file list, feature scope, or review category.
-- If no category is given, review for correctness, regressions, tests, security, dependencies, product mismatch, and operational risk.
+- Use explicit input first; otherwise infer from context, recent edits, selected files, or branch.
+- Safest default: review current changes for correctness, regressions, tests, security, dependencies, product mismatch, and operational risk.
 
 ## Workflow
 
-1. **Identify scope**. Determine whether the review target is a PR, branch, commit range, diff, files, or current worktree.
+1. **Identify input**. Determine whether the review target is a PR, branch, commit range, diff, files, or current worktree.
 2. **Read context**. Check relevant specs, issues, `AGENTS.md`, docs, tests, and config that define expected behavior or standards.
 3. **Inspect changes**. Review for correctness, regressions, missing tests, security risks, dependency risks, error handling gaps, operational risk, and product/spec mismatch.
 4. **Prioritize findings**. Report actionable issues first, ordered by severity, with file and line references when possible.

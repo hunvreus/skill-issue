@@ -5,10 +5,11 @@ description: Audit a new or unfamiliar project to understand its structure, heal
 
 # Audit
 
-## Scope
+## Input
 
-- A repository, project path, subsystem, branch, or explicit audit question.
-- If no scope is provided, audit the current project at a high level.
+- A repository, path, subsystem, branch, feature, diff, or audit question.
+- Use explicit input first; otherwise infer from context, recent edits, selected files, or branch.
+- Safest default: audit the current project at a high level.
 
 ## Workflow
 

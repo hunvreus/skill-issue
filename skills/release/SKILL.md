@@ -5,10 +5,11 @@ description: Prepare, validate, document, tag, or publish a software release. Us
 
 # Release
 
-## Scope
+## Input
 
 - A version, branch, package, changelog scope, release target, or request to prepare or validate a release.
-- If the release target is unclear, identify the repo's release conventions before changing files.
+- Use explicit input first; otherwise infer from context, tags, changelog, branch, or repo conventions.
+- Safest default: identify release conventions before changing files.
 
 ## Workflow
 

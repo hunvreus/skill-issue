@@ -5,10 +5,11 @@ description: "Investigate live or deployed-app issues by gathering evidence from
 
 # Investigate Live
 
-## Scope
+## Input
 
 - A live or deployed app, environment, host, service, incident, symptom, alert, or user-reported production issue.
-- If the affected target is unclear, identify environment, host/platform, timeframe, and symptom before running commands.
+- Use explicit input first; otherwise infer from context, logs, alerts, selected files, or branch.
+- Safest default: identify environment, host/platform, timeframe, and symptom before running commands.
 
 ## Workflow
 
@@ -18,7 +19,7 @@ description: "Investigate live or deployed-app issues by gathering evidence from
 4. **Form hypotheses**. List likely causes and test one at a time.
 5. **Use bounded commands**. Prefer targeted commands with timeouts and limited output; avoid dumping secrets or huge logs.
 6. **Recommend fix path**. Separate immediate mitigation, root-cause fix, rollback, and follow-up hardening.
-7. **Document findings**. Update `docs/devops.md` or a runbook if the investigation reveals missing operational knowledge.
+7. **Document findings**. Update the relevant `docs/development/*.md` file if the investigation reveals missing developer or operator knowledge.
 
 ## Output
 
