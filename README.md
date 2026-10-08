@@ -1,6 +1,6 @@
 # Skill Issue
 
-This is a toolkit of skills I use every day to write, test, document, and deploy software.
+This is a small set of skills I use to plan, release, deploy, and operate software.
 
 Agents know a lot but often need better defaults. They don't need to be micromanaged or forced into rigid processes; they just need a nudge in the right direction.
 
@@ -33,19 +33,11 @@ npx skills add hunvreus/skill-issue --all
 
 ## Skills
 
-- [`audit`](./skills/audit/SKILL.md): assess a new or unfamiliar project and identify the highest-value next actions.
-- [`debug`](./skills/debug/SKILL.md): reproduce, isolate, and fix broken behavior.
 - [`deploy`](./skills/deploy/SKILL.md): set up or validate app deployment.
-- [`document`](./skills/document/SKILL.md): create or update project docs from verified behavior.
-- [`handoff`](./skills/handoff/SKILL.md): summarize work so another session can continue.
 - [`investigate`](./skills/investigate/SKILL.md): investigate live app or deployment issues.
 - [`overhaul`](./skills/overhaul/SKILL.md): plan and run cautious multi-step codebase improvement.
-- [`prototype`](./skills/prototype/SKILL.md): build throwaway prototypes that answer one question.
-- [`refactor`](./skills/refactor/SKILL.md): simplify code while preserving behavior.
 - [`release`](./skills/release/SKILL.md): prepare and validate releases.
-- [`review`](./skills/review/SKILL.md): review changes for actionable issues.
 - [`second-opinion`](./skills/second-opinion/SKILL.md): ask another local AI CLI to critique a proposal.
-- [`test`](./skills/test/SKILL.md): add, repair, or drive behavior tests.
 
 ## Agent Templates
 

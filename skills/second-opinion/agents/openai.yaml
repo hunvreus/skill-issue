@@ -4,4 +4,4 @@ interface:
   default_prompt: "Use $second-opinion to ask another local AI CLI for feedback on the current proposal."
 
 policy:
-  allow_implicit_invocation: true
+  allow_implicit_invocation: false

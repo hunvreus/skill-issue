@@ -3,37 +3,20 @@ name: investigate
 description: "Investigate live or deployed-app issues by gathering evidence from health checks, logs, metrics, deploy history, config, and remote hosts. Use when the problem is happening outside the local dev loop: production, staging, a server, Cloudflare, VPS, CI/CD runtime, logs, alerts, or deployed behavior."
 ---
 
-# Investigate Live
-
-## Input
-
-- A live or deployed app, environment, host, service, incident, symptom, alert, or user-reported production issue.
-- Use explicit input first; otherwise infer from context, logs, alerts, selected files, or branch.
-- Safest default: identify environment, host/platform, timeframe, and symptom before running commands.
+# Investigate
 
 ## Workflow
 
-1. **Define symptom**. Capture what is broken, when it started, who is affected, and what changed recently.
-2. **Map targets**. Identify platform, environment, host/service names, deploy version, domains, databases, queues, and dependencies.
-3. **Gather read-only evidence**. Check health endpoints, logs, metrics, recent deploys, config, resource usage, errors, and dependency status.
-4. **Form hypotheses**. List likely causes and test one at a time.
-5. **Use bounded commands**. Prefer targeted commands with timeouts and limited output; avoid dumping secrets or huge logs.
-6. **Recommend fix path**. Separate immediate mitigation, root-cause fix, rollback, and follow-up hardening.
-7. **Document findings**. Update the relevant `docs/development/*.md` file if the investigation reveals missing developer or operator knowledge.
-
-## Output
-
-- Symptom and affected scope
-- Evidence gathered
-- Most likely cause
-- Immediate mitigation
-- Root-cause fix or next diagnostic step
-- Docs/runbook gaps
+1. **Pin down the symptom**. What is broken, since when, who is affected, and what changed (deploys, config, dependencies).
+2. **Name the targets**. Environment, platform or host, service, and deployed version.
+3. **Gather read-only evidence**. Health endpoints, logs, metrics, recent deploys, config, resource usage.
+4. **Recommend a path**. Separate immediate mitigation (including rollback) from the root-cause fix.
+5. **Close knowledge gaps**. If the investigation surfaced missing operator knowledge, update `docs/development/`.
 
 ## Guardrails
 
-- Use `debug` instead when the issue can be reproduced locally with tests, scripts, or a dev server.
-- Start read-only; do not restart services, run migrations, change DNS, or mutate production without explicit approval.
-- Do not expose secrets from logs, env files, dashboards, or command output.
-- Distinguish facts from hypotheses.
-- Keep remote targets explicit and commands bounded.
+- If the issue reproduces locally, debug it locally instead.
+- Read-only by default. Restarts, migrations, DNS or firewall changes, deletes, and any other production mutation need explicit approval.
+- Bound every command with timeouts, line limits, or time windows; do not dump huge logs.
+- Do not expose secrets from env files, logs, or dashboards.
+- Label what the evidence confirms versus what is still a hypothesis.

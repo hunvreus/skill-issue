@@ -5,43 +5,23 @@ description: Ask another local AI CLI for feedback on a proposal, architecture, 
 
 # Second Opinion
 
-## Input
-
-- A proposal, architecture, feature plan, refactor plan, implementation approach, review finding, or technical decision to sanity-check.
-- Use explicit input first; otherwise infer the proposal and target AI from context.
-- Safest default: detect available local AI CLIs and ask which one to use.
-
 ## Workflow
 
-1. **Clarify target and input**. Identify the proposal to review and the AI CLI to ask. If either is missing, infer from context or ask one focused question.
-2. **Detect available CLIs**. Check likely commands with `command -v`, such as `claude`, `gemini`, `codex`, `cursor`, `opencode`, and `aider`. Do not assume a CLI exists.
-3. **Verify invocation**. Use the selected CLI's help output before running it. Prefer non-interactive prompt modes and avoid commands that open editors, mutate files, install packages, or start long-lived sessions.
-4. **Write the proposal**. Create a temporary directory with `mktemp -d` and write the proposal, relevant constraints, and explicit questions to a file such as `proposal.md`.
-5. **Ask the other AI**. Pass the proposal file content to the selected CLI. Ask for critique, missed risks, alternatives, and concrete changes to the proposal.
-6. **Capture feedback**. Save the raw response in the same temporary directory. If the CLI fails, report the command, failure mode, and closest safe fallback.
-7. **Compare judgments**. Separate useful objections from weak or irrelevant feedback. Do not accept the other AI's answer just because it came from another model.
-8. **Revise if warranted**. Produce a final assessment, noting what changed, what did not, and why.
+1. **Pick the CLI**. Use the one the user named. Otherwise detect candidates with `command -v` (`claude`, `gemini`, `codex`, `cursor-agent`, `opencode`, `aider`) and ask which to use.
+2. **Check invocation**. Read the CLI's `--help` for its non-interactive prompt mode and any read-only or sandbox flag. Avoid modes that open editors, edit files, install packages, or start sessions.
+3. **Write the proposal**. In a `mktemp -d` directory, write `proposal.md` with the proposal, constraints, and specific questions: critique, missed risks, alternatives.
+4. **Ask**. Run the CLI on the proposal and save the raw response as `feedback.md` in the same directory. On failure, report the command and error.
+5. **Weigh it**. Adopt what holds up, reject what does not, and say why.
 
 ## Output
 
-- Target AI and CLI used
-- Proposal file path and feedback file path
-- Other AI's strongest points
-- Points rejected or deprioritized
-- Final assessment
-- Revised proposal when useful
-
-## Examples
-
-- `second-opinion with gemini on this architecture plan`
-- `ask Claude for a second opinion on the refactor`
-- `get another model to critique this feature proposal`
-- `compare our deploy plan with Codex`
+- CLI used, proposal and feedback paths
+- Points adopted and points rejected
+- Revised assessment or proposal
 
 ## Guardrails
 
-- Do not send secrets, credentials, private keys, tokens, customer data, or unnecessary proprietary context to another CLI.
-- Do not run a paid, networked, or external AI CLI unless the user requested that tool or approved it.
-- Do not let the other AI mutate the repository; use it for feedback only.
-- Keep the prompt focused. Send the proposal and constraints, not the entire repo, unless explicitly requested.
-- Treat second opinions as advisory evidence, not authority.
+- Only run a CLI the user named or approved; it may be paid or networked.
+- Send the proposal and the context it needs, not the repo. Never send secrets, credentials, or customer data.
+- The other AI must not modify the repo.
+- Treat the feedback as advisory, not authoritative.

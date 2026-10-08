@@ -1,5 +1,5 @@
 interface:
-  display_name: "Investigate Live"
+  display_name: "Investigate"
   short_description: "Investigate deployed app issues"
   default_prompt: "Use $investigate to diagnose this live or deployed-app issue."
 

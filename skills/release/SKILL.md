@@ -5,37 +5,18 @@ description: Prepare, validate, document, tag, or publish a software release. Us
 
 # Release
 
-## Input
-
-- A version, branch, package, changelog scope, release target, or request to prepare or validate a release.
-- Use explicit input first; otherwise infer from context, tags, changelog, branch, or repo conventions.
-- Safest default: identify release conventions before changing files.
-
 ## Workflow
 
-1. **Identify release target**. Determine version, branch, package, environment, and whether this is a draft, dry run, or publish.
-2. **Inspect changes**. Review commits, merged PRs, changelog entries, and user-facing changes since the previous release.
-3. **Validate readiness**. Run relevant tests, typecheck, lint, build, packaging, migration, and smoke checks.
-4. **Handle versioning**. If the version changes, update package manifests, lockfiles, changelogs, and generated metadata that must stay consistent.
-5. **Align tag and version**. Keep the release version aligned with the git tag, such as version `2.0.2` and tag `v2.0.2`.
-6. **Update release docs**. Prepare changelog, release notes, migration notes, and known issues. If the release notes format is unclear, ask instead of inventing one.
-7. **Summarize before publishing**. Report branch, target version, tag, validation results, changed files, and release notes draft.
-8. **Create release artifact**. Tag, package, publish, or open the release only according to repo conventions and explicit user approval.
-9. **Report outcome**. Include version, artifacts, validation, skipped checks, and follow-up tasks.
-
-## Output
-
-- Release target and scope
-- Matching version and tag
-- Changelog or release notes
-- Validation run
-- Version/tag/artifact status
-- Known issues and follow-up work
+1. **Identify the target**. Version, branch or package, and whether this is a dry run or a publish.
+2. **Review changes**. Commits, PRs, and changelog entries since the last tag.
+3. **Validate**. Tests, typecheck, build, packaging, and migrations as relevant.
+4. **Bump consistently**. Update every place the version must agree: manifests, lockfiles, changelog, generated metadata. The tag matches the version: `2.0.2` → `v2.0.2`.
+5. **Draft notes**. Changelog and release notes in the repo's existing format.
+6. **Stop before publishing**. Summarize version, tag, validation results, changed files, and the notes draft.
+7. **Publish on approval**. Tag, push, and publish per repo conventions.
 
 ## Guardrails
 
-- Do not create or push tags, publish releases, push release commits, or deploy without explicit user approval.
-- Do not invent semantic version bumps; infer from repo rules or ask.
-- Do not invent release notes format; infer from repo rules or ask.
-- Do not hide failed or skipped validation.
-- Preserve existing release conventions over generic release process.
+- Get explicit approval before creating or pushing tags, pushing release commits, publishing, or deploying.
+- Do not guess the version bump or release notes format; infer from repo conventions or ask.
+- Report failed or skipped checks; never hide them.

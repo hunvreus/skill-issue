@@ -20,14 +20,14 @@
 ```md
 # Verb
 
-## Input
 ## Workflow
 ## Output
-## Examples
 ## Guardrails
 ```
 
-- `Examples` is optional. Use it only when examples clarify categories or materially improve behavior.
+- Only encode what a strong model would not do by default: approval gates, personal conventions, or tool mechanics. Skip generic engineering method.
+- `Output` is optional. Use it only when a specific report shape matters.
+- Set `allow_implicit_invocation: false` in `agents/openai.yaml` for skills that should run only when explicitly requested.
 - Update `README.md` when adding, removing, or renaming skills.
 - Keep `agents/openai.yaml` aligned with the skill.
 
